@@ -8,30 +8,26 @@ namespace Lab_1
 {
     internal class Relation
     {
-        private string person1;
-        private string person2;
-        private enum RelationType {Sister, Brother, Mother, Father };
+        private enum RelationType {Sister, Brother, Mother, Father};
+        private string relation;
 
-        public Relation(string first, string second)  
+        public Relation(string r)  
         {
-            person1 = first;
-            person2 = second;
+            relation = r;
+            //person2 = second;
         }
 
-        public void ShowRelationShip()
+        public void ShowRelationShip(Person p1, Person p2)
         {
-            if ((person1 == "Gina" && person2 == "Mary") || (person1 == "Mary" && person2 == "Gina")) {
-                Console.WriteLine($"Relationship between {person1} and {person2} is: {RelationType.Sister.ToString()}hood");
+            if(this.relation == "sister") 
+            { 
+                Console.WriteLine($"Relationship between {p1.firstName} and {p2.firstName} is: {RelationType.Sister.ToString()}hood");
             }
-            if ((person1 == "Ian" && person2 == "Mike") || (person1 == "Mike" && person2 == "Ian"))
+            if (this.relation == "brother")
             {
-                Console.WriteLine($"Relationship between {person1} and {person2} is: {RelationType.Brother.ToString()}hood");
+                Console.WriteLine($"Relationship between {p1.firstName} and {p2.firstName} is: {RelationType.Brother.ToString()}hood");
             }
-            else
-            {
-                Console.WriteLine($"There is no relationship between {person1} and {person2}");
-            }
-            
+           
         }
     }
 }

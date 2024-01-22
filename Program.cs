@@ -25,10 +25,10 @@ namespace Lab_1
             Console.WriteLine(Mary.GetAgeInTenYears());
 
             //Create two relationships and display
-            Relation relation1 = new Relation("Gina", "Mary");
-            Relation relation2 = new Relation("Ian", "Mike");
-            relation1.ShowRelationShip();
-            relation2.ShowRelationShip();
+            Relation sister = new Relation("sister");
+            Relation brother = new Relation("brother");
+            sister.ShowRelationShip(Gina, Mary);
+            brother.ShowRelationShip(Ian, Mike);
 
             //add all person objects into a list
             List<Person> PersonList = new List<Person>();
