@@ -14,7 +14,6 @@ namespace Lab_1
         public Relation(string r)  
         {
             relation = r;
-            //person2 = second;
         }
 
         public void ShowRelationShip(Person p1, Person p2)
