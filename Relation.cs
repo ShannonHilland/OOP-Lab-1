@@ -27,6 +27,10 @@ namespace Lab_1
             {
                 Console.WriteLine($"Relationship between {person1} and {person2} is: {RelationType.Brother.ToString()}hood");
             }
+            else
+            {
+                Console.WriteLine($"There is no relationship between {person1} and {person2}");
+            }
             
         }
     }
